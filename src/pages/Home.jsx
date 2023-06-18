@@ -8,7 +8,7 @@ export const Home = () => {
     const { habits, addHabit } = useContext(HabitContext);
     const [showModal, setShowModal] = useState(false);
 
-    console.log(habits);
+    
     const [name, setName] = useState("");
     const [timeOfDay, setTimeOfDay] = useState("Any Time");
     const [time, setTime] = useState("Today");
