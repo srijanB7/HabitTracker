@@ -1,0 +1,68 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
+}
+
+.name {
+    display: flex;
+    gap: 6px;
+}
+
+.name > input {
+    width: 300px;
+}
+
+.repeatations {
+    display: flex;
+    justify-content: space-between;
+}
+
+.repeat-child {
+    display: flex;
+    gap: 6px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.time-child {
+    display: flex;
+    gap: 6px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.habits-container {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-evenly;
+   
+}
+
+.archive-habits-container {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-evenly;
+
+}
+
+.habit {
+  border: 1px solid blueviolet;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: aquamarine;
+}
