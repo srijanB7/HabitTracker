@@ -22,6 +22,10 @@ export const Home = () => {
     const handleClose = () => setShowModal(false);
     const handleDiscard = () => setShowModal(false);
     const handleSave = () => {
+        if(name === "") {
+            alert("enter name");
+            return;
+        }
         setShowModal(false);
         const habitDetails = {
             id: crypto.randomUUID(),

@@ -44,7 +44,11 @@ export const HabitCard = ({ id, name, timeOfDay, time, goal, repeat }) => {
     }
 
     const handleSave = () => {
-        setShowHabit(false)
+        if(updatedName === "") {
+            alert("enter name");
+            return;
+        }
+        setShowHabit(false);
         const habitDetails = {
             id,
             name: updatedName,
