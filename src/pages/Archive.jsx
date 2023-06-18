@@ -1,9 +1,13 @@
 import React, { useContext } from "react";
 import { HabitContext } from "../context/HabitContext";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 export const Archive = () => {
-    const { archiveHabits } = useContext(HabitContext);
+    const { archiveHabits, deleteArchiveHabit } = useContext(HabitContext);
+    const handleDelete = (id) => {
+        deleteArchiveHabit(id)
+    }
 
     return (
         <div className="archive-container">
@@ -23,6 +27,13 @@ export const Archive = () => {
                             <p>time: {habit.time}</p>
                             <p>goal: {habit.goal}</p>
                             <p>repeat: {habit.repeat}</p>
+                            <Button
+                                variant="contained"
+                                color="error"
+                                onClick={() => handleDelete(habit.id)}
+                            >
+                                Delete
+                            </Button>
                         </div>
                     ))
                 ) : (

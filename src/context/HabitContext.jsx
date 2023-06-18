@@ -21,6 +21,10 @@ export const HabitProvider = ({ children }) => {
         setHabits((prev) => prev.filter((habit) => habit.id !== id));
     };
 
+    const deleteArchiveHabit = (id) => {
+        setArchiveHabits((prev) => prev.filter((habit) => habit.id !== id));
+    };
+
     const archiveHabit = (id) => {
         const habit = habits.find((habit) => habit.id === id);
         setArchiveHabits([...archiveHabits, habit]);
@@ -46,6 +50,7 @@ export const HabitProvider = ({ children }) => {
                 archiveHabits,
                 archiveHabit,
                 editHabit,
+                deleteArchiveHabit
             }}
         >
             {children}
